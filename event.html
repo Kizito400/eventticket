@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticketing System</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <header>
+        <h1>Event Ticketing System</h1>
+    </header>
+
+    <main>
+        <!-- Ticket Purchase Form -->
+        <section id="ticket-form-section">
+            <h2>Purchase Ticket</h2>
+            <form id="ticket-form">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="ticket-quantity">Ticket Quantity:</label>
+                <input type="number" id="ticket-quantity" min="1" placeholder="Enter ticket quantity" required>
+
+                <button type="submit">Purchase Ticket</button>
+            </form>
+        </section>
+
+        <!-- Payment Link Section -->
+        <section id="payment-section" style="display:none;">
+            <h3>Your Payment Link:</h3>
+            <p id="payment-link" style="display:none;"></p>
+            <p id="payment-status" style="display:none;"></p>
+        </section>
+
+        <!-- Ticket Details Section -->
+        <section id="ticket-details-section" style="display:none;">
+            <h3>Your Ticket Details</h3>
+            <p id="ticket-id" style="display:none;"></p>
+            <div id="qr-code-container" style="display:none;"></div>
+
+            <!-- Cancel Button -->
+            <button id="cancel-button" style="display:none;">Cancel Ticket</button>
+        </section>
+
+        <!-- Ticket Transfer Section -->
+        <section id="ticket-transfer-section" style="display:none;">
+            <h3>Transfer Your Ticket</h3>
+            <label for="new-owner-email">New Owner's Email:</label>
+            <input type="email" id="new-owner-email" placeholder="Enter the new owner's email" required>
+            <button id="transfer-button">Transfer Ticket</button>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Event Ticketing System</p>
+        </footer>
+    </main>
+
+    <script src="event.js"></script>
+</body>
+</html>
